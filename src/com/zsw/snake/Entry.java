@@ -10,11 +10,11 @@ import java.awt.event.ActionEvent;
  * @author: shengweiz
  * @create: 2019-08-17 22:33
  **/
-public class Main extends JFrame {
+public class Entry extends JFrame {
 
-    private static ImageIcon bg = new ImageIcon(Main.class.getResource("bg.jpg"));//背景图片
+    private static ImageIcon bg = new ImageIcon(Entry.class.getResource("bg.jpg"));//背景图片
 
-    public Main() {
+    public Entry() {
         super("贪吃蛇");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(bg.getIconWidth() + 30, bg.getIconHeight() + 50);
@@ -22,7 +22,7 @@ public class Main extends JFrame {
     }
 
     public static void main(String[] args) {
-        Main entry = new Main();
+        Entry entry = new Entry();
         Container c = entry.getContentPane();
         c.setLayout(null);
         JLabel bgLable = new JLabel(bg);
@@ -38,6 +38,7 @@ public class Main extends JFrame {
 
         startBtn.addActionListener((ActionEvent e)->{
             //开始游戏
+            new Game();
         });
         quitBtn.addActionListener((ActionEvent e)->{
             //退出游戏
