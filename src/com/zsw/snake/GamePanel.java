@@ -51,7 +51,7 @@ public class GamePanel extends JPanel {
 
     private static int S = 15;//蛇每次移动距离
 
-    private static int sleepTime = 800;
+    private static int sleepTime = 100;
 
     private static int score = 0;//得分
 
@@ -70,7 +70,7 @@ public class GamePanel extends JPanel {
     }
 
     public GamePanel() {
-        new BGMusicPlayer("C:\\Users\\周胜伟\\Music\\bg.mp3").start();//播放背景音乐
+        //new BGMusicPlayer("C:\\Users\\周胜伟\\Music\\bg.mp3").start();//播放背景音乐
         initSnake();
         new Thread(()->{
             boolean flag = true;
@@ -127,7 +127,7 @@ public class GamePanel extends JPanel {
         }
         snake.add(0, node);
         food = null;//食物重新生成
-        sleepTime -= 10;//速度变快
+        sleepTime -= 5;//速度变快
         score += 10;//分数加10
     }
 
