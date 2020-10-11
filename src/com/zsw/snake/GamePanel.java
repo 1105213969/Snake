@@ -49,7 +49,7 @@ public class GamePanel extends JPanel {
 
     private final static int HEIGHT = bg.getHeight();//高度
 
-    private static int S = 15;//蛇每次移动距离
+    private static int S = 10;//蛇每次移动距离
 
     private static int sleepTime = 100;
 
